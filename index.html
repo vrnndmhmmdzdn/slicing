@@ -33,7 +33,7 @@
   </head>
   <body>
     <nav
-      class="h-16 w-full flex justify-between px-5 md:px-6 xl:px-10 py-3 items-center fixed"
+      class="h-16 w-full flex justify-between px-5 md:px-6 xl:px-10 py-3 items-center fixed transition-colors duration-500 bg-transparent"
     >
       <div class="hidden md:flex gap-5">
         <h3 class="text-white text-sm lg:text-lg font-medium">Home</h3>
@@ -103,7 +103,7 @@
     </div>
 
     <section
-      class="w-full h-screen bg-[url('/img/hero.jpg')] bg-cover bg-center bg-fixed px-7 flex items-center justify-center"
+      class="w-full h-screen bg-[url('./img/hero.jpg')] bg-cover bg-center bg-fixed px-7 flex items-center justify-center"
     >
       <div
         class="max-w-3xl flex flex-col gap-5 md:gap-7 lg:gap-10 justify-center items-center"
@@ -135,7 +135,7 @@
 
     <section class="w-full h-fit px-7 bg-[#EAEAEA]">
       <div
-        class="pt-14 pb-10 w-full flex flex-col md:flex-row gap-3 justify-center items-center"
+        class="pt-14 pb-10 w-full flex flex-col md:flex-row gap-3 lg:gap-10 justify-center items-center"
       >
         <div>
           <h1 class="text-blue-500 text-3xl lg:text-4xl font-bold text-left">
@@ -154,7 +154,7 @@
           <img src="img/Rectangle 12.png" class="w-full" />
         </div>
         <div class="flex flex-row gap-10">
-          <div class="flex flex-col gap-8">
+          <div class="flex flex-col gap-6">
             <div class="w-fit">
               <img src="img/Rectangle 13.png" class="w-fit" />
             </div>
@@ -387,7 +387,7 @@
           </p>
         </div>
 
-        <div class="carousel rounded-box w-64">
+        <div class="carousel rounded-box w-64 shadow-2xl">
           <div class="carousel-item w-full flex flex-col gap-5">
             <div>
               <img
@@ -601,7 +601,7 @@
     </section>
 
     <section class="h-fit py-20 px-7 bg-[#EAEAEA]">
-      <div class="flex flex-col gap-5 justify-center items-center">
+      <div class="flex flex-col gap-5 lg:gap-8 justify-center items-center">
         <h1 class="text-blue-700 text-3xl lg:text-4xl font-bold text-center">
           Join now to get special offers at Univerz
         </h1>
@@ -622,7 +622,7 @@
         class="grid grid-cols-2 lg:grid-cols-5 justify-center items-center gap-5 text-white"
       >
         <div class="lg:col-span-2">
-          <h1 class="font-bold text-xl md:text-2xl lg:text-3xl">
+          <h1 class="font-bold text-xl md:text-2xl lg:text-3xl mb-5">
             SMA IT HSI-IDN
           </h1>
           <p class="text-sm md:text-base font-light">
@@ -683,6 +683,21 @@
         showList.classList.add("scale-0");
         showList.classList.remove("scale-100");
       }
+
+      var navbar = document.querySelector("nav");
+
+          // Fungsi untuk mengubah background navbar saat di-scroll
+          function animasiscroll() {
+            if (window.scrollY > 0) {
+              navbar.classList.add("bg-navbar", "shadow-md", "navbar-bg");
+              navbar.classList.remove("bg-transparent");
+            } else {
+              navbar.classList.add("bg-transparent");
+              navbar.classList.remove("bg-navbar", "shadow-md", "navbar-bg");
+            }
+          }
+          window.addEventListener("scroll", animasiscroll)
+          animasiscroll()
     </script>
   </body>
 </html>
