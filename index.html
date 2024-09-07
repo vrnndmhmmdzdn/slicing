@@ -1,704 +1,620 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="img/logo.png">
-    <title >SMA IT HSI-IDN</title>
-    <link rel="stylesheet" href="src/output.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <script src="https://cdn.tailwindcss.com"></script>
 
-    <style>
-      * {
-        font-family: Montserrat;
-      }
-    </style>
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
-  </head>
-  <body>
-    <nav
-      class="h-16 w-full flex justify-between px-5 md:px-6 xl:px-10 py-3 items-center fixed transition-colors duration-500 bg-transparent"
-    >
-      <div class="hidden md:flex gap-5">
-        <h3 class="text-white text-sm lg:text-lg font-medium">Home</h3>
-        <h3 class="text-white text-sm lg:text-lg font-medium">About Us</h3>
-      </div>
-      <div class="flex">
-        <h2 class="text-white text-lg md:text-xl lg:text-3xl font-bold">
-          SMA IT HSI-IDN
-        </h2>
-      </div>
-      <div class="hidden md:flex gap-5">
-        <h3 class="text-white text-sm lg:text-lg font-medium">Course</h3>
-        <h3 class="text-white text-sm lg:text-lg font-medium">Blog</h3>
-      </div>
-      <div class="md:hidden">
-        <div
-          onclick="showMenus()"
-          id="show"
-          class="scale-100 md:hidden cursor-pointer transition duration-200"
-        >
-          <i class="ph-bold ph-list text-3xl text-white"></i>
-        </div>
-      </div>
-    </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="img/logo.png">
+  <title>SMA IT HSI-IDN</title>
+  <link rel="stylesheet" href="src/output.css" />
+  <!-- font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+  <!-- daisy -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <!-- icon -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
-    <div
-      onclick="hideMenus()"
-      id="hide"
-      class="scale-0 md:hidden cursor-pointer fixed top-4 right-5 z-[90] transition duration-200"
-    >
-      <i class="ph-bold ph-x text-white text-3xl"></i>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    * {
+      font-family: Montserrat;
+    }
+  </style>
+</head>
+
+<body>
+  <nav
+    class="h-16 w-full flex justify-between px-5 md:px-6 xl:px-10 py-3 items-center fixed transition-colors duration-500 bg-transparent">
+    <div class="hidden md:flex gap-5">
+      <h3 class="text-white text-sm lg:text-lg font-medium"><a href="#">Home</a></h3>
+      <h3 class="text-white text-sm lg:text-lg font-medium"><a href="#about-us">About Us</a></h3>
     </div>
-    <div
-      id="menus"
-      class="scale-0 w-full h-full bg-transparan fixed top-0 flex justify-center items-center transition duration-200 ease-in-out"
-    >
-      <ul class="text-white text-xl text-center w-10/12">
-        <a href=""
-          ><li
-            class="w-full py-3 border mb-2 rounded-lg hover:scale-105 transition duration-200 hover:opacity-70 hover:shadow-md hover:shadow-black"
-          >
-            Home
-          </li></a
-        >
-        <a href=""
-          ><li
-            class="w-full py-3 border mb-2 rounded-lg hover:scale-105 transition duration-200 hover:opacity-70 hover:shadow-md hover:shadow-black"
-          >
-            About Us
-          </li></a
-        >
-        <a href=""
-          ><li
-            class="w-full py-3 border mb-2 rounded-lg hover:scale-105 transition duration-200 hover:opacity-70 hover:shadow-md hover:shadow-black"
-          >
-            Course
-          </li></a
-        >
-        <a href=""
-          ><li
-            class="w-full py-3 border mb-2 rounded-lg hover:scale-105 transition duration-200 hover:opacity-70 hover:shadow-md hover:shadow-black"
-          >
-            Blog
-          </li></a
-        >
-      </ul>
+    <div class="flex">
+      <a href="index.html" class="text-white text-lg md:text-xl lg:text-3xl font-bold">
+        SMA IT HSI-IDN
+      </a>
     </div>
-
-    <section
-      class="w-full h-screen bg-[url('./img/hero.jpg')] bg-cover bg-center bg-fixed px-7 flex items-center justify-center"
-    >
-      <div
-        class="max-w-3xl flex flex-col gap-5 md:gap-7 lg:gap-10 justify-center items-center"
-      >
-        <h1
-          class="text-4xl md:text-5xl lg:text-7xl text-white font-bold text-center"
-        >
-          SANTRI JAGOAN IT PINTER NGAJI
-        </h1>
-        <h3 class="text-white text-center text-xs md:text-sm lg:text-base">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui eius
-          distinctio impedit cumque dolore porro ut est voluptatem illum
-          repellat.
-        </h3>
-        <div class="w-full md:max-w-xl flex justify-evenly">
-          <div
-            class="w-40 lg:w-56 bg-blue-700 rounded-full text-center py-1 md:py-2 hover:scale-105 transition duration-100 hover:shadow-lg cursor-pointer"
-          >
-            <h4 class="text-white text-sm md:text-base">Mulai</h4>
-          </div>
-          <div
-            class="w-40 lg:w-56 border-2 border-white rounded-full text-center py-1 md:py-2 hover:scale-105 transition duration-100 hover:shadow-lg cursor-pointer"
-          >
-            <h4 class="text-white text-sm md:text-base">Pelajari</h4>
-          </div>
-        </div>
+    <div class="hidden md:flex gap-5">
+      <h3 class="text-white text-sm lg:text-lg font-medium"><a href="#course">Course</a></h3>
+      <h3 class="text-white text-sm lg:text-lg font-medium"><a href="#blog">Blog</a></h3>
+    </div>
+    <div class="md:hidden">
+      <div onclick="showMenus()" id="show" class="scale-100 md:hidden cursor-pointer transition duration-200">
+        <i class="ph-bold ph-list text-3xl text-white"></i>
       </div>
-    </section>
+    </div>
+  </nav>
 
-    <section class="w-full h-fit px-7 bg-[#EAEAEA]">
-      <div
-        class="pt-14 pb-10 w-full flex flex-col md:flex-row gap-3 lg:gap-10 justify-center items-center"
-      >
-        <div>
-          <h1 class="text-blue-500 text-3xl lg:text-4xl font-bold text-left">
-            Univerz's Commitment to Academic Excellence
-          </h1>
-        </div>
-        <div>
-          <p class="text-xs md:text-sm xl:text-base text-left">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae,
-            repellat? Reprehenderit vel illum
-          </p>
-        </div>
-      </div>
-      <div class="flex flex-col lg:flex-row gap-10 justify-center items-center">
-        <div class="w-fit">
-          <img src="img/Rectangle 12.png" class="w-full" />
-        </div>
-        <div class="flex flex-row gap-10">
-          <div class="flex flex-col gap-6">
-            <div class="w-fit">
-              <img src="img/Rectangle 13.png" class="w-fit" />
-            </div>
-            <div class="max-w-xs">
-              <p class="text-xs md:text-sm xl:text-base text-left md:text-left">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat
-                incidunt minima mollitia, ab nam totam laudantium odit suscipit?
-                Qui, modi?
-              </p>
-            </div>
-            <div
-              class="w-1/2 bg-blue-700 rounded-full text-center py-1 md:py-2 px-7 hover:scale-105 transition duration-100 hover:shadow-lg cursor-pointer"
-            >
-              <h4 class="text-white text-sm">Lebih Lanjut</h4>
-            </div>
-            <div></div>
-          </div>
-          <div class="flex flex-col gap-5">
-            <div class="text-center bg-white w-fit h-fit px-6 py-7 rounded-xl">
-              <h1 class="text-blue-500 font-bold text-base md:text-lg">35+</h1>
-              <h3 class="text-xs md:text-base">Course</h3>
-            </div>
-            <div class="text-center bg-white w-fit h-fit px-6 py-7 rounded-xl">
-              <h1 class="text-blue-500 font-bold text-base md:text-lg">35+</h1>
-              <h3 class="text-xs md:text-base">Course</h3>
-            </div>
-            <div class="text-center bg-white w-fit h-fit px-6 py-7 rounded-xl">
-              <h1 class="text-blue-500 font-bold text-base md:text-lg">35+</h1>
-              <h3 class="text-xs md:text-base">Course</h3>
-            </div>
-            <div class="text-center bg-white w-fit h-fit px-6 py-7 rounded-xl">
-              <h1 class="text-blue-500 font-bold text-base md:text-lg">35+</h1>
-              <h3 class="text-xs md:text-base">Course</h3>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+  <div onclick="hideMenus()" id="hide"
+    class="scale-0 md:hidden cursor-pointer fixed top-4 right-5 z-[90] transition duration-200">
+    <i class="ph-bold ph-x text-white text-3xl"></i>
+  </div>
+  <div id="menus"
+    class="scale-0 w-full h-full bg-transparan fixed top-0 flex justify-center items-center transition duration-200 ease-in-out">
+    <ul class="text-white text-xl text-center w-10/12">
+      <a href="#" onclick="hideMenus()">
+        <li
+          class="w-full py-3 border mb-2 rounded-lg hover:scale-105 transition duration-200 hover:opacity-70 hover:shadow-md hover:shadow-black">
+          Home
+        </li>
+      </a>
+      <a href="#about-us" onclick="hideMenus()">
+        <li
+          class="w-full py-3 border mb-2 rounded-lg hover:scale-105 transition duration-200 hover:opacity-70 hover:shadow-md hover:shadow-black">
+          About Us
+        </li>
+      </a>
+      <a href="#course" onclick="hideMenus()">
+        <li
+          class="w-full py-3 border mb-2 rounded-lg hover:scale-105 transition duration-200 hover:opacity-70 hover:shadow-md hover:shadow-black">
+          Course
+        </li>
+      </a>
+      <a href="#blog" onclick="hideMenus()">
+        <li
+          class="w-full py-3 border mb-2 rounded-lg hover:scale-105 transition duration-200 hover:opacity-70 hover:shadow-md hover:shadow-black">
+          Blog
+        </li>
+      </a>
+    </ul>
+  </div>
 
-    <section class="h-fit px-7 pt-20 bg-[#EAEAEA]">
-      <div class="w-full flex flex-col gap-7">
-        <h1 class="text-blue-500 text-3xl lg:text-4xl font-bold text-center">
-          Explore Our Academic Offerings Chart Your Path to Success
-        </h1>
-        <p class="text-xs md:text-sm xl:text-base text-center">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa quia
-          non fugit, eius vero impedit. Quae blanditiis dicta asperiores neque.
+  <section
+    class="w-full h-screen bg-[url('./img/bghero.JPG')] bg-cover bg-center bg-fixed px-7 flex items-center justify-center">
+    <div class="max-w-3xl flex flex-col gap-5 md:gap-7 lg:gap-10 justify-center items-center">
+      <h1 class="text-4xl md:text-5xl lg:text-7xl text-white font-bold text-center">
+        JAGOAN IT PINTER NGAJI
+      </h1>
+      <h3 class="text-white text-center text-xs md:text-sm lg:text-base">SMA-IT HSI-IDN menjadi lembaga pendidikan
+        berbasis asrama yang mampu melakukan kaderisasi generasi yang berakidah
+        shahihah, berakhlaq karimah, mandiri, unggul dalam prestasi serta menguasai ilmu pengetahuan & teknologi
+      </h3>
+      <div class="w-full md:max-w-xl flex justify-center">
+        <a href="#about-us"
+          class="w-40 lg:w-56 bg-blue-700 rounded-full text-center py-2 md:py-3 hover:scale-105 transition duration-100 hover:shadow-lg cursor-pointer">
+          <h4 class="text-white text-sm md:text-base">Mulai</h4>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="w-full h-fit px-7 py-10 bg-[#EAEAEA]" id="about-us">
+    <div class="pt-14 lg:px-7 pb-10 w-full flex flex-col md:flex-row gap-3 lg:gap-10 justify-center items-center">
+      <div>
+        <h1 class="text-blue-500 text-3xl lg:text-4xl font-bold text-left">
+          Komitmen Sekolah terhadap Keunggulan Akademik</h1>
+      </div>
+      <div>
+        <p class="text-xs md:text-sm xl:text-base text-left">
+          Komitmen kami dalam bertujuan untuk mengkader generasi muda islami yang berakhlaqul karimah,mandiri,unggul
+          dalam prestasi dan menguasai ilmu pengetahuan teknologi
         </p>
-        <div
-          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
-        >
-          <div
-            class="bg-blue-700 py-5 pl-4 pr-2 rounded-xl flex flex-row justify-start items-center gap-5 hover:scale-105 transition duration-100 hover:shadow-2xl cursor-pointer"
-          >
-            <div class="w-12 md:w-fit">
-              <img src="img/Icon.png" class="w-full" />
-            </div>
-            <div>
-              <h2 class="text-white font-bold text-base lg:text-lg">
-                Engineering
-              </h2>
-              <p class="text-white font-normal text-xs md:text-sm">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              </p>
-            </div>
-          </div>
-          <div
-            class="bg-blue-700 py-5 pl-4 pr-2 rounded-xl flex flex-row justify-start items-center gap-5 hover:scale-105 transition duration-100 hover:shadow-2xl cursor-pointer"
-          >
-            <div class="w-12 md:w-fit">
-              <img src="img/Icon (1).png" class="w-full" />
-            </div>
-            <div>
-              <h2 class="text-white font-bold text-base lg:text-lg">
-                Psychologi
-              </h2>
-              <p class="text-white font-normal text-xs md:text-sm">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              </p>
-            </div>
-          </div>
-          <div
-            class="bg-blue-700 py-5 pl-4 pr-2 rounded-xl flex flex-row justify-start items-center gap-5 hover:scale-105 transition duration-100 hover:shadow-2xl cursor-pointer"
-          >
-            <div class="w-12 md:w-fit">
-              <img src="img/Icon (2).png" class="w-full" />
-            </div>
-            <div>
-              <h2 class="text-white font-bold text-base lg:text-lg">
-                Fine Art
-              </h2>
-              <p class="text-white font-normal text-xs md:text-sm">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              </p>
-            </div>
-          </div>
-          <div
-            class="bg-blue-700 py-5 pl-4 pr-2 rounded-xl flex flex-row justify-start items-center gap-5 hover:scale-105 transition duration-100 hover:shadow-2xl cursor-pointer"
-          >
-            <div class="w-12 md:w-fit">
-              <img src="img/Icon (3).png" class="w-full" />
-            </div>
-            <div>
-              <h2 class="text-white font-bold text-base lg:text-lg">
-                Language
-              </h2>
-              <p class="text-white font-normal text-xs md:text-sm">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              </p>
-            </div>
-          </div>
-          <div
-            class="bg-blue-700 py-5 pl-4 pr-2 rounded-xl flex flex-row justify-start items-center gap-5 hover:scale-105 transition duration-100 hover:shadow-2xl cursor-pointer"
-          >
-            <div class="w-12 md:w-fit">
-              <img src="img/Icon (4).png" class="w-full" />
-            </div>
-            <div>
-              <h2 class="text-white font-bold text-base lg:text-lg">
-                Accountancy
-              </h2>
-              <p class="text-white font-normal text-xs md:text-sm">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              </p>
-            </div>
-          </div>
-          <div
-            class="bg-blue-700 py-5 pl-4 pr-2 rounded-xl flex flex-row justify-start items-center gap-5 hover:scale-105 transition duration-100 hover:shadow-2xl cursor-pointer"
-          >
-            <div class="w-12 md:w-fit">
-              <img src="img/Icon (5).png" class="w-full" />
-            </div>
-            <div>
-              <h2 class="text-white font-bold text-base lg:text-lg">Science</h2>
-              <p class="text-white font-normal text-xs md:text-sm">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div
-          class="w-1/2 md:w-1/4 bg-blue-700 rounded-full text-center py-1 md:py-2 px-7 hover:scale-105 transition duration-100 hover:shadow-lg cursor-pointer mx-auto mt-2"
-        >
-          <h4 class="text-white text-sm">Lebih Lanjut</h4>
-        </div>
       </div>
-    </section>
-
-    <section class="h-fit py-20 px-7 bg-[#EAEAEA]">
-      <div class="flex flex-col gap-8 justify-center items-center">
-        <div>
-          <h1
-            class="text-blue-500 text-3xl lg:text-4xl font-bold text-center mb-7"
-          >
-            Explore Our Academic Offerings Chart Your Path to Success
-          </h1>
-          <p class="text-xs md:text-sm xl:text-base text-center">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa quia
-            non fugit, eius vero impedit. Quae blanditiis dicta asperiores
-            neque.
-          </p>
-        </div>
-        <div class="flex flex-col md:flex-row gap-7 justify-center items-center">
-          <div class="w-fit">
-            <img src="img/Rectangle 15.png" class="w-full" />
-          </div>
-          <div class="flex flex-col gap-3 justify-start md:items-center">
-            <div class="flex flex-row items-center gap-7">
-              <div class="w-fit">
-                <img src="img/ceklis.png" class="w-fit" />
-              </div>
-              <p class="text-transparan font-bold text-lg lg:text-xl">
-                Complete everything as ordered
-              </p>
-            </div>
-            <div class="flex flex-row items-center gap-7">
-              <div class="w-fit">
-                <img src="img/ceklis.png" class="w-fit" />
-              </div>
-              <p class="text-transparan font-bold text-lg lg:text-xl">
-                Complete everything as ordered
-              </p>
-            </div>
-            <div class="flex flex-row items-center gap-7">
-              <div class="w-fit">
-                <img src="img/ceklis.png" class="w-fit" />
-              </div>
-              <p class="text-transparan font-bold text-lg lg:text-xl">
-                Complete everything as ordered
-              </p>
-            </div>
-            <div class="flex flex-row items-center gap-7">
-              <div class="w-fit">
-                <img src="img/ceklis.png" class="w-fit" />
-              </div>
-              <p class="text-transparan font-bold text-lg lg:text-xl">
-                Complete everything as ordered
-              </p>
-            </div>
-            <div class="flex flex-row items-center gap-7">
-              <div class="w-fit">
-                <img src="img/ceklis.png" class="w-fit" />
-              </div>
-              <p class="text-transparan font-bold text-lg lg:text-xl">
-                Complete everything as ordered
-              </p>
-            </div>
-            <div
-              class="bg-blue-700 rounded-full text-center py-1 md:py-2 px-10 hover:scale-105 transition duration-100 hover:shadow-lg cursor-pointer mx-auto mt-2"
-            >
-              <h4 class="text-white text-sm">See All Our Admission</h4>
-            </div>
-          </div>
-        </div>
+    </div>
+    <div class="flex flex-col lg:flex-row gap-10 justify-center items-start">
+      <div class="w-fit rounded-2xl overflow-hidden">
+        <img src="img/DSC_0048.jpg" class="w-full" />
       </div>
-    </section>
-
-    <section class="h-fit py-20 px-7 bg-blue-700">
-      <div class="flex flex-col gap-8 items-center justify-center">
-        <div>
-          <h1
-            class="text-white text-3xl lg:text-4xl font-bold text-center mb-7"
-          >
-            What Our Student Say About Us
-          </h1>
-          <p class="text-white text-xs md:text-sm xl:text-base text-center">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa quia
-            non fugit, eius vero impedit. Quae blanditiis dicta asperiores
-            neque.
-          </p>
-        </div>
-
-        <div class="carousel rounded-box w-64 shadow-2xl">
-          <div class="carousel-item w-full flex flex-col gap-5">
-            <div>
-              <img
-                src="img/DSC_0601.JPG"
-                class="w-full"
-                alt="Tailwind CSS Carousel component"
-              />
-            </div>
-            <div class="flex flex-col gap-3 p-4">
-              <h1 class="font-bold text-white text-lg md:text-xl">
-                Vernanda Zaidan
-              </h1>
-              <p class="font-normal text-neutral-300">
-                Expert Fullstack Developer
-              </p>
-              <p class="text-white text-sm md:text-base">
-                "<i
-                  >Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Rerum, molestiae?</i
-                >"
-              </p>
-            </div>
+      <div class="flex flex-row gap-10">
+        <div class="flex flex-col gap-6 w-fit">
+          <div class="w-fit rounded-2xl overflow-hidden">
+            <img src="img/pembelajaran.jpg" class="w-fit" />
           </div>
-          <div class="carousel-item w-full flex flex-col gap-5">
-            <div>
-              <img
-                src="img/DSC_0601.JPG"
-                class="w-full"
-                alt="Tailwind CSS Carousel component"
-              />
-            </div>
-            <div class="flex flex-col gap-3 p-4">
-              <h1 class="font-bold text-white text-lg md:text-xl">
-                Vernanda Zaidan
-              </h1>
-              <p class="font-normal text-neutral-300">
-                Expert Fullstack Developer
-              </p>
-              <p class="text-white text-sm md:text-base">
-                "<i
-                  >Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Rerum, molestiae?</i
-                >"
-              </p>
-            </div>
-          </div>
-          <div class="carousel-item w-full flex flex-col gap-5">
-            <div>
-              <img
-                src="img/DSC_0601.JPG"
-                class="w-full"
-                alt="Tailwind CSS Carousel component"
-              />
-            </div>
-            <div class="flex flex-col gap-3 p-4">
-              <h1 class="font-bold text-white text-lg md:text-xl">
-                Vernanda Zaidan
-              </h1>
-              <p class="font-normal text-neutral-300">
-                Expert Fullstack Developer
-              </p>
-              <p class="text-white text-sm md:text-base">
-                "<i
-                  >Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Rerum, molestiae?</i
-                >"
-              </p>
-            </div>
-          </div>
-          <div class="carousel-item w-full flex flex-col gap-5">
-            <div>
-              <img
-                src="img/DSC_0601.JPG"
-                class="w-full"
-                alt="Tailwind CSS Carousel component"
-              />
-            </div>
-            <div class="flex flex-col gap-3 p-4">
-              <h1 class="font-bold text-white text-lg md:text-xl">
-                Vernanda Zaidan
-              </h1>
-              <p class="font-normal text-neutral-300">
-                Expert Fullstack Developer
-              </p>
-              <p class="text-white text-sm md:text-base">
-                "<i
-                  >Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Rerum, molestiae?</i
-                >"
-              </p>
-            </div>
-          </div>
-          <div class="carousel-item w-full flex flex-col gap-5">
-            <div>
-              <img
-                src="img/DSC_0601.JPG"
-                class="w-full"
-                alt="Tailwind CSS Carousel component"
-              />
-            </div>
-            <div class="flex flex-col gap-3 p-4">
-              <h1 class="font-bold text-white text-lg md:text-xl">
-                Vernanda Zaidan
-              </h1>
-              <p class="font-normal text-neutral-300">
-                Expert Fullstack Developer
-              </p>
-              <p class="text-white text-sm md:text-base">
-                "<i
-                  >Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Rerum, molestiae?</i
-                >"
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="h-fit py-20 px-7 bg-[#EAEAEA]">
-      <div class="flex flex-col gap-10">
-        <div class="flex flex-col lg:flex-row gap-5">
-          <div>
-            <h1 class="text-blue-700 text-3xl lg:text-4xl font-bold text-left">
-              Check out our Latest Articles and Knowledge
-            </h1>
-          </div>
-          <div class="flex flex-col gap-5">
-            <p
-              class="text-transparan text-xs md:text-sm xl:text-base text-left lg:text-right"
-            >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at
-              massa sit amet nisi blandit ve adipiscing elit.
+          <div class="max-w-sm">
+            <p class="text-sm md:text-base xl:text-base text-left md:text-left">
+              SMA IT HSI IDN lembaga pendidikan yang islami dan mencetak generasi muda yang bisa beradaptasi dengan
+              kemajuan zaman dan perkembangan teknologi
             </p>
-            <div
-              class="bg-blue-700 rounded-full text-center py-1 md:py-2 px-10 hover:scale-105 transition duration-100 hover:shadow-lg cursor-pointer mt-2 self-start lg:self-end"
-            >
-              <h4 class="text-white text-sm">See All</h4>
-            </div>
           </div>
+
         </div>
-        <div class="flex flex-wrap justify-center items-center gap-8">
-          <div class="w-80 h-fit bg-white rounded-2xl overflow-hidden">
-            <div class="w-fit">
-              <img
-                src="img/DSC_0375.JPG"
-                class="w-full aspect-video bg-cover"
-              />
-            </div>
-            <div class="px-8 py-5 flex flex-col items-start gap-2 md:gap-3">
-              <div
-                class="bg-blue-700 rounded-xl text-center py-1 md:py-2 px-10 hover:scale-105 transition duration-100 hover:shadow-lg cursor-pointer mt-2"
-              >
-                <h4 class="text-white text-sm">See All</h4>
-              </div>
-              <p class="text-xs md:text-md text-transparan">28 Agustus 2024</p>
-              <p class="text-base md:text-lg text-blue-700 font-bold">
-                Many Univerz university graduates immediately work
-              </p>
-              <p class="text-sm md:text-base text-transparan font-medium">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              </p>
-            </div>
+        <div class="flex flex-col gap-5 justify-center items-center">
+          <div class="text-center bg-white w-fit h-fit px-6 py-7 rounded-xl">
+            <h1 class="text-blue-500 font-bold text-base md:text-lg">10+</h1>
+            <h3 class="text-xs md:text-base">Ekstra<br>kulikuler</h3>
           </div>
-          <div class="w-80 h-fit bg-white rounded-2xl overflow-hidden">
-            <div class="w-fit">
-              <img
-                src="img/DSC_0375.JPG"
-                class="w-full aspect-video bg-cover"
-              />
-            </div>
-            <div class="px-8 py-5 flex flex-col items-start gap-2 md:gap-3">
-              <div
-                class="bg-blue-700 rounded-xl text-center py-1 md:py-2 px-10 hover:scale-105 transition duration-100 hover:shadow-lg cursor-pointer mt-2"
-              >
-                <h4 class="text-white text-sm">See All</h4>
-              </div>
-              <p class="text-xs md:text-md text-transparan">28 Agustus 2024</p>
-              <p class="text-base md:text-lg text-blue-700 font-bold">
-                Many Univerz university graduates immediately work
-              </p>
-              <p class="text-sm md:text-base text-transparan font-medium">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              </p>
-            </div>
+          <div class="text-center bg-white w-fit h-fit px-6 py-7 rounded-xl">
+            <h1 class="text-blue-500 font-bold text-base md:text-lg">7+</h1>
+            <h3 class="text-xs md:text-base">Jam<br>Pelajaran</h3>
           </div>
-          <div class="w-80 h-fit bg-white rounded-2xl overflow-hidden">
-            <div class="w-fit">
-              <img
-                src="img/DSC_0375.JPG"
-                class="w-full aspect-video bg-cover"
-              />
-            </div>
-            <div class="px-8 py-5 flex flex-col items-start gap-2 md:gap-3">
-              <div
-                class="bg-blue-700 rounded-xl text-center py-1 md:py-2 px-10 hover:scale-105 transition duration-100 hover:shadow-lg cursor-pointer mt-2"
-              >
-                <h4 class="text-white text-sm">See All</h4>
-              </div>
-              <p class="text-xs md:text-md text-transparan">28 Agustus 2024</p>
-              <p class="text-base md:text-lg text-blue-700 font-bold">
-                Many Univerz university graduates immediately work
-              </p>
-              <p class="text-sm md:text-base text-transparan font-medium">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              </p>
-            </div>
+          <div class="text-center bg-white w-fit h-fit px-6 py-7 rounded-xl">
+            <h1 class="text-blue-500 font-bold text-base md:text-lg">20+</h1>
+            <h3 class="text-xs md:text-base">Beasiswa</h3>
+          </div>
+          <div class="text-center bg-white w-fit h-fit px-6 py-7 rounded-xl">
+            <h1 class="text-blue-500 font-bold text-base md:text-lg">10+</h1>
+            <h3 class="text-xs md:text-base">Mata <br> Pelajaran</h3>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="h-fit py-20 px-7 bg-[#EAEAEA]">
-      <div class="flex flex-col gap-5 lg:gap-8 justify-center items-center">
-        <h1 class="text-blue-700 text-3xl lg:text-4xl font-bold text-center">
-          Join now to get special offers at Univerz
+  <section class="h-fit px-7 py-40 bg-[#EAEAEA]" id="course">
+    <div class=" w-full flex flex-col gap-7 ">
+      <div class="text-center flex flex-col lg:flex-row gap-3 lg:items-center lg:px-10">
+        <h1 class="text-blue-500 text-3xl lg:text-4xl lg:text-left font-bold">
+          Penawaran Akademik Kami Untuk Jalan Anda Menuju Kesuksesan
         </h1>
-        <p class="text-transparan text-xs md:text-sm xl:text-base text-center">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at
-          massa sit amet nisi blandit ve adipiscing elit.
+        <p class="text-sm md:text-base lg:text-xl">
+          Apa yang akan anda pelajari di sekolah ini?
         </p>
-        <div
-          class="bg-blue-700 w-1/2 md:w-2/5 rounded-full text-center py-2 md:py-3 px-10 hover:scale-105 transition duration-100 hover:shadow-lg cursor-pointer"
-        >
-          <h4 class="text-white text-sm">See All</h4>
+      </div>
+      <div id="course-content" class="course-blog hidden">
+        <div class="h-fit grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 justify-center items-center">
+
+          <div
+            class="bg-blue-700 py-5 pl-4 pr-2 rounded-xl flex flex-row justify-start items-center gap-5 hover:scale-105 transition duration-100 hover:shadow-2xl cursor-pointer">
+            <div class="w-fit">
+              <img src="img/Icon.png" class="w-[70px]" />
+            </div>
+            <div>
+              <h2 class="text-white font-bold text-base lg:text-lg">
+                Network Engineering
+              </h2>
+              <p class="text-white font-normal text-xs md:text-sm">
+                perancangan, implementasi, pemeliharaan, dan pengelolaan jaringan komputer
+              </p>
+            </div>
+          </div>
+          <div
+            class="bg-blue-700 py-5 pl-4 pr-2 rounded-xl flex flex-row justify-start items-center gap-5 hover:scale-105 transition duration-100 hover:shadow-2xl cursor-pointer">
+            <div class="w-fit">
+              <img src="img/Icon (1).png" class="w-[70px]" />
+            </div>
+            <div>
+              <h2 class="text-white font-bold text-base lg:text-lg">
+                Web Programming
+              </h2>
+              <p class="text-white font-normal text-xs md:text-sm">
+                Pembuatan dan pengembangan aplikasi web menggunakan berbagai bahasa pemrograman, framework, dan
+                teknologi
+                berbasis web </p>
+            </div>
+          </div>
+          <div
+            class="bg-blue-700 py-5 pl-4 pr-2 rounded-xl flex flex-row justify-start items-center gap-5 hover:scale-105 transition duration-100 hover:shadow-2xl cursor-pointer">
+            <div class="w-fit">
+              <img src="img/Icon (5).png" class="w-[70px]" />
+            </div>
+            <div>
+              <h2 class="text-white font-bold text-base lg:text-lg">Graphic Design</h2>
+              <p class="text-white font-normal text-xs md:text-sm">
+                Menciptakan konten visual untuk menyampaikan pesan atau informasi dengan cara yang efektif dan menarik
+              </p>
+            </div>
+          </div>
+          <div
+            class="bg-blue-700 py-5 pl-4 pr-2 rounded-xl flex flex-row justify-start items-center gap-5 hover:scale-105 transition duration-100 hover:shadow-2xl cursor-pointer">
+            <div class="w-fit">
+              <img src="img/Icon (5).png" class="w-[70px]" />
+            </div>
+            <div>
+              <h2 class="text-white font-bold text-base lg:text-lg">Diniyyah</h2>
+              <p class="text-white font-normal text-xs md:text-sm">
+                Dilengkapi dengan pelajaran-pelajaran syar'i seperti Aqidah, Fiqh dsb sebagai dasar ilmu seorang
+            </div>
+          </div>
+          <div
+            class="bg-blue-700 py-5 pl-4 pr-2 rounded-xl flex flex-row justify-start items-center gap-5 hover:scale-105 transition duration-100 hover:shadow-2xl cursor-pointer">
+            <div class="w-fit">
+              <img src="img/Icon (2).png" class="w-[70px]" />
+            </div>
+            <div>
+              <h2 class="text-white font-bold text-base lg:text-lg">
+                Tahfidzul Qur'an
+              </h2>
+              <p class="text-white font-normal text-xs md:text-sm">
+                Menghafal Al-Quran dengan target 8 Juz setiap tahunnya
+              </p>
+            </div>
+          </div>
+          <div
+            class="bg-blue-700 py-5 pl-4 pr-2 rounded-xl flex flex-row justify-start items-center gap-5 hover:scale-105 transition duration-100 hover:shadow-2xl cursor-pointer">
+            <div class="w-fit">
+              <img src="img/Icon (3).png" class="w-[70px]" />
+            </div>
+            <div>
+              <h2 class="text-white font-bold text-base lg:text-lg">
+                Bahasa
+              </h2>
+              <p class="text-white font-normal text-xs md:text-sm">
+                Bahasa Arab dan Inggris sebagai kurikulum dasar
+              </p>
+            </div>
+          </div>
+          <div
+            class="bg-blue-700 py-5 pl-4 pr-2 rounded-xl flex flex-row justify-start items-center gap-5 hover:scale-105 transition duration-100 hover:shadow-2xl cursor-pointer">
+            <div class="w-fit">
+              <img src="img/Icon (4).png" class="w-[70px]" />
+            </div>
+            <div>
+              <h2 class="text-white font-bold text-base lg:text-lg">
+                Penjurusan
+              </h2>
+              <p class="text-white font-normal text-xs md:text-sm">
+                Dengan ada nya penjurusan minat dan bakat, anda dapat memilih jurusan bedasarkan keinginan dan kemampuan
+                anda
+              </p>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
+      <button id="course-button"
+        class="w-1/2 md:w-1/4 bg-blue-700 rounded-full text-center py-2 md:py-3 px-7 hover:scale-105 transition duration-100 hover:shadow-lg cursor-pointer mx-auto mt-2 ">
+        <h4 class="text-white text-sm">Tampilkan Semua</h4>
+      </button>
 
-    <footer class="h-fit py-16 px-7 bg-blue-700 flex">
-      <div
-        class="grid grid-cols-2 lg:grid-cols-5 justify-center items-center gap-5 text-white"
-      >
-        <div class="lg:col-span-2">
-          <h1 class="font-bold text-xl md:text-2xl lg:text-3xl mb-5">
-            SMA IT HSI-IDN
-          </h1>
-          <p class="text-sm md:text-base font-light">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius
-            magnam tempore fugit doloremque quibusdam vitae nam dignissimos
-            repudiandae. Id, laborum?
-          </p>
+    </div>
+  </section>
+
+  <section class="h-fit py-20 px-7 bg-[#EAEAEA]">
+    <div class="flex flex-col gap-8 justify-center items-center">
+      <div class="flex flex-col justify-start text-left lg:text-center">
+        <h1 class="text-blue-500 text-3xl lg:text-4xl font-bold mb-7">Keunggulan Sarana Dan Prasarana Kami
+        </h1>
+        <p class="text-sm md:text-base xl:text-lg">
+          Rasulullah bersabda "Barang siapa yang berjalan untuk mencari ilmu, Allah memudahkan dirinya jalan ke surga"
+        </p>
+      </div>
+      <div class="flex flex-col lg:flex-row gap-7 justify-center items-start lg:items-center">
+        <div class="w-fit lg:w-3/5 rounded-2xl md:col-span-2 overflow-hidden bg-blue-400">
+          <img src="img/DSC_0334.JPG" class="w-full" />
         </div>
-        <div class="">
-          <h3 class="text-base md:text-lg font-bold mb-3">Quick Links</h3>
-          <ul class="font-light">
-            <li>Home</li>
-            <li>About Us</li>
-            <li>Our Service</li>
-            <li>Contact Us</li>
-          </ul>
-        </div>
-        <div class="">
-          <h3 class="text-base md:text-lg font-bold mb-3">Pages</h3>
-          <ul class="font-light">
-            <li>Our Blog</li>
-            <li>Out Team</li>
-            <li>Testimonial</li>
-            <li>CTA</li>
-          </ul>
-        </div>
-        <div class="">
-          <h3 class="text-base md:text-lg font-bold mb-3">Follow Us</h3>
-          <ul class="font-light">
-            <li>Facebook</li>
-            <li>Instagram</li>
-            <li>Linkedln</li>
-            <li>Youtube</li>
-          </ul>
+        <div class="flex flex-col gap-5 w-fit h-fit">
+          <div class="flex flex-row items-center gap-5">
+            <div class="w-12">
+              <img src="img/ceklis.png" class="w-full" />
+            </div>
+            <p class="text-transparan font-bold text-base lg:text-lg">
+              Tempat Yang Nyaman Dan Asri
+            </p>
+          </div>
+          <div class="flex flex-row items-center gap-5">
+            <div class="w-12">
+              <img src="img/ceklis.png" class="w-full" />
+            </div>
+            <p class="text-transparan font-bold text-base lg:text-lg">
+              Mini Zoo
+            </p>
+          </div>
+          <div class="flex flex-row items-center gap-5">
+            <div class="w-12">
+              <img src="img/ceklis.png" class="w-full" />
+            </div>
+            <p class="text-transparan font-bold text-base lg:text-lg">
+              Tempat Strategis Ditengah Kota
+            </p>
+          </div>
+          <div class="flex flex-row items-center gap-5">
+            <div class="w-12">
+              <img src="img/ceklis.png" class="w-full" />
+            </div>
+            <p class="text-transparan font-bold text-base lg:text-lg">
+              Masjid Apung
+            </p>
+          </div>
+          <div class="flex flex-row items-center gap-5">
+            <div class="w-12">
+              <img src="img/ceklis.png" class="w-full" />
+            </div>
+            <p class="text-transparan font-bold text-base lg:text-lg">
+              Pengajar Yang Berpengalaman
+            </p>
+          </div>
         </div>
       </div>
-    </footer>
+    </div>
+  </section>
 
-    <script>
-      const openMenu = document.querySelector("#menus");
-      const closeList = document.querySelector("#show");
-      const showList = document.querySelector("#hide");
+  <section class="h-fit py-28 px-7 bg-blue-700">
+    <div class="flex flex-col gap-8 items-center justify-center">
+      <div>
+        <h1 class="text-white text-3xl lg:text-4xl font-bold text-center mb-7">
+          Apa Yang Mereka Katakan?
+        </h1>
+        <p class="text-white text-sm md:text-base xl:text-lg text-center">
+          Biarkan murid-murid kami berbicara tentang sekolah ini,
+        </p>
+      </div>
 
-      function showMenus() {
-        openMenu.classList.add("scale-100");
-        openMenu.classList.remove("scale-0");
-        closeList.classList.add("scale-0");
-        closeList.classList.remove("scale-100");
-        showList.classList.remove("scale-0");
-        showList.classList.add("scale-100");
+      <div class="carousel rounded-box w-64 shadow-2xl">
+        <div class="carousel-item w-full flex flex-col gap-5">
+          <div>
+            <img src="img/DSC_0601.JPG" class="w-full" alt="Tailwind CSS Carousel component" />
+          </div>
+          <div class="flex flex-col gap-3 p-4">
+            <h1 class="font-bold text-white text-lg md:text-xl">
+              Vernanda Zaidan
+            </h1>
+            <p class="font-normal text-neutral-300">
+              Santri Kelas XII
+            </p>
+            <p class="text-white text-sm md:text-base">
+              "<i>Masyaa Allah, Masyaa Allah sekolah nyaa, Takbiiirrrr</i>"
+            </p>
+          </div>
+        </div>
+        <div class="carousel-item w-full flex flex-col gap-5">
+          <div>
+            <img src="img/mubarok.png" class="w-full" alt="Tailwind CSS Carousel component" />
+          </div>
+          <div class="flex flex-col gap-3 p-4">
+            <h1 class="font-bold text-white text-lg md:text-xl">
+              Zulqornain Mubarok
+            </h1>
+            <p class="font-normal text-neutral-300">
+              Santri Kelas XII
+            </p>
+            <p class="text-white text-sm md:text-base">
+              "<i>Menurut watashi pondok ini sangat sughoi desh</i>"
+            </p>
+          </div>
+        </div>
+        <div class="carousel-item w-full flex flex-col gap-5">
+          <div>
+            <img src="img/hamka.png" class="w-full" alt="Tailwind CSS Carousel component" />
+          </div>
+          <div class="flex flex-col gap-3 p-4">
+            <h1 class="font-bold text-white text-lg md:text-xl">
+              Hamka Rifa'i
+            </h1>
+            <p class="font-normal text-neutral-300">
+              Santri Kelas XII
+            </p>
+            <p class="text-white text-sm md:text-base">
+              "<i>Sekolah ini sangat bagus dan cocok untuk mengembangkan bakat, masyaa Allah</i>
+              "
+            </p>
+          </div>
+        </div>
+        <div class="carousel-item w-full flex flex-col gap-5">
+          <div>
+            <img src="img/daffa.png" class="w-full" alt="Tailwind CSS Carousel component" />
+          </div>
+          <div class="flex flex-col gap-3 p-4">
+            <h1 class="font-bold text-white text-lg md:text-xl">
+              Daffa I.Fawwazy
+            </h1>
+            <p class="font-normal text-neutral-300">
+              Santri Kelas XII
+            </p>
+            <p class="text-white text-sm md:text-base">
+              "<i>Sekolah disini memiliki ustadz dan guru asrama yang sangat profesional dalam mengurus santri</i>"
+            </p>
+          </div>
+        </div>
+        <div class="carousel-item w-full flex flex-col gap-5">
+          <div>
+            <img src="img/abdut.png" class="w-full" alt="Tailwind CSS Carousel component" />
+          </div>
+          <div class="flex flex-col gap-3 p-4">
+            <h1 class="font-bold text-white text-lg md:text-xl">
+              Abdurrahman Dzaky
+            </h1>
+            <p class="font-normal text-neutral-300">
+              Santri Kelas XII
+            </p>
+            <p class="text-white text-sm md:text-base">
+              "<i>Barakallahu fiikum buat kalian yang sekolah disini</i>"
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="blog" class="h-fit py-28 px-7 bg-[#EAEAEA]">
+    <div class=" flex flex-col gap-10">
+      <div class="flex flex-col lg:px-10 gap-3 justify-center lg:items-center">
+        <h1 class="text-blue-700 text-3xl lg:text-4xl font-bold text-center">
+          Lihat Artikel Terbaru kami
+        </h1>
+        <p class="text-transparan text-sm md:text-base xl:text-lg text-center">
+          Lihat kabar dan berita terbaru tentang sekolah ini!
+        </p>
+      </div>
+      <div class="flex flex-wrap justify-center items-center gap-8">
+        <div class="w-80 h-[480px] bg-white rounded-2xl overflow-hidden">
+          <div class="w-fit h-fit">
+            <img src="img/musabaqoh.jpg" class="w-full aspect-video bg-cover" />
+          </div>
+          <div class="px-8 py-5 flex flex-col gap-2 md:gap-3">
+
+            <p class="text-xs md:text-md text-transparan">23 Agustus 2024</p>
+            <p class="text-base md:text-lg text-blue-700 font-bold">
+              Seminar P5 SMA IT HSI IDN Dan Pendidikan Sosial
+            </p>
+            <p class="text-sm md:text-base text-transparan font-medium line-clamp-3 peer-checked:line-clamp-none">
+              SMA IT HSI-IDN melakukan bimbingan p5 kepada para santri untuk bimbingan dalam kehidupan sehari hari</p>
+            <a href="blog/p5.html"
+              class="bg-blue-700 rounded-xl text-center py-1 md:py-2 px-10 hover:scale-105 transition duration-100 hover:shadow-lg cursor-pointer mt-2">
+              <h4 class="text-white text-sm">Lihat</h4>
+            </a>
+          </div>
+        </div>
+        <div class="w-80 h-[480px] bg-white rounded-2xl overflow-hidden">
+          <div class="w-fit h-fit">
+            <img src="img/DSC_0038.JPG" class="w-full aspect-video bg-cover" />
+          </div>
+          <div class="px-8 py-5 flex flex-col gap-2 md:gap-3">
+            <p class="text-xs md:text-md text-transparan">17 Agustus 2024</p>
+            <p class="text-base md:text-lg text-blue-700 font-bold">
+              Memperingati Kemerdekaan NKRI Yang Ke-79
+            </p>
+            <p class="text-sm md:text-base text-transparan font-medium peer-checked:line-clamp-none line-clamp-3">
+              Dalam rangka mensyukuri nikmat kemerdekaan ini Kami melakukan upacara dan tausiyah atas nikmat kemerdekaan
+              ini, dan diakhiri dengan perlombaan antar santri
+            </p>
+            <a href="blog/kemerdekaan.html"
+              class="bg-blue-700 rounded-xl text-center py-1 md:py-2 px-10 hover:scale-105 transition duration-100 hover:shadow-lg cursor-pointer mt-2">
+              <h4 class="text-white text-sm">Lihat</h4>
+            </a>
+          </div>
+        </div>
+        <div class="w-80 h-[480px] bg-white rounded-2xl overflow-hidden">
+          <div class="w-fit h-fit">
+            <img src="img/DSC_0600.JPG" class="w-full aspect-video bg-cover" />
+          </div>
+          <div class="px-8 py-5 flex flex-col gap-2 md:gap-3">
+            <p class="text-xs md:text-md text-transparan">28 Agustus 2024</p>
+            <p class="text-base md:text-lg text-blue-700 font-bold">
+              SMA IT HSI-IDN Membagi Tempat Belajar Menjadi 3 Untuk Sementara
+            </p>
+            <p class="text-sm md:text-base text-transparan font-medium peer-checked:line-clamp-none line-clamp-3">
+              Untuk tempat belajar yang kondusif dan tempat sementara untuk kelanjutan pembangunan kami membagi
+              menjadi
+              beberapa tempat.
+              Purworejo untuk kelas 12 & 10, Sukabumi untuk kelas 11, dan bekasi untuk SMA IT HSI-IDN Akhwat
+            </p>
+            <a href="blog/lokasipondok.html"
+              class="bg-blue-700 rounded-xl text-center py-1 md:py-2 px-10 hover:scale-105 transition duration-100 hover:shadow-lg cursor-pointer mt-2">
+              <h4 class="text-white text-sm">Lihat</h4>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="hsi" class="h-fit py-20 px-7 bg-[#EAEAEA]">
+    <div class="flex flex-col gap-8 justify-center items-center">
+      <h1 class="text-blue-700 text-3xl lg:text-4xl font-bold text-center">
+        Gabung Ke HSI Dan Ikuti Pembelajaran Online!
+      </h1>
+      <p class="text-transparan text-xs md:text-sm xl:text-base text-center">
+        Sejak tahun 2013, HSI (Halaqah Silsilah Ilmiyyah) AbdullahRoy menghadirkan program belajar online tentang Aqidah
+        Islam
+        secara ta'shil (terstruktur dan berkesinambungan) yang diasuh dan dibimbing oleh Ustadz Dr.Abdullah Roy
+      </p>
+      <a href="https://edu.hsi.id/" target="_blank"
+        class="bg-blue-700 w-1/2 md:w-2/5 rounded-full text-center py-2 md:py-3 px-10 hover:scale-105 transition duration-100 hover:shadow-lg cursor-pointer">
+        <h4 class="text-white text-sm">Kunjungi</h4>
+      </a>
+    </div>
+  </section>
+
+  <footer class="h-fit py-16 px-7 bg-blue-700 flex">
+    <div class="grid grid-cols-2 lg:grid-cols-5 justify-center items-center gap-5 text-white">
+      <div class="lg:col-span-2">
+        <h1 class="font-bold text-xl md:text-2xl lg:text-3xl mb-5">
+          SMA IT HSI-IDN
+        </h1>
+        <p class="text-sm md:text-base font-light">
+          SMA-IT HSI-IDN merupakan kolaborasi Yayasan HSI AbdullahRoy dan Yayasan IDN. Saat ini berada di Purworejo dan
+          mulai
+          tahun ajaran 2024/2025 akan berpindah ke daerah Cikembar, Sukabumi Jawa Barat.
+        </p>
+      </div>
+      <div class="">
+        <h3 class="text-base md:text-lg font-bold mb-3">Akses Cepat</h3>
+        <ul class="font-light">
+          <li><a href="#">Home</a></li>
+          <li><a href="#about-us">About Us</a></li>
+          <li><a href="#course">Our Service</a></li>
+          <li><a href="#hsi">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="">
+        <h3 class="text-base md:text-lg font-bold mb-3">Pages</h3>
+        <ul class="font-light">
+          <li>Our Blog</li>
+          <li>Our Team</li>
+          <li>Testimonial</li>
+        </ul>
+      </div>
+      <div class="">
+        <h3 class="text-base md:text-lg font-bold mb-3">Follow Us</h3>
+        <ul class="font-light">
+          <li><a href="https://www.facebook.com/sma.ti.hsi.idn" target="_blank"></a>Facebook</li>
+          <li><a href="https://www.instagram.com/smaithsiidn/" target="_blank">Instagram</a></li>
+          <li><a href="https://wa.me/6289623039600?text=Assalamu'alaykum%20Warahmatullahi%20Wabarakatuh">Whatsapp</a>
+          </li>
+          <li><a href="https://www.youtube.com/@smaithsiidnpurworejo" target="_blank">Youtube</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const openMenu = document.querySelector("#menus");
+    const closeList = document.querySelector("#show");
+    const showList = document.querySelector("#hide");
+
+    function showMenus() {
+      openMenu.classList.add("scale-100");
+      openMenu.classList.remove("scale-0");
+      closeList.classList.add("scale-0");
+      closeList.classList.remove("scale-100");
+      showList.classList.remove("scale-0");
+      showList.classList.add("scale-100");
+    }
+
+    function hideMenus() {
+      openMenu.classList.remove("scale-100");
+      openMenu.classList.add("scale-0");
+      closeList.classList.remove("scale-0");
+      closeList.classList.add("scale-100");
+      showList.classList.add("scale-0");
+      showList.classList.remove("scale-100");
+    }
+
+    var navbar = document.querySelector("nav");
+
+    // Fungsi untuk mengubah background navbar saat di-scroll
+    function animasiscroll() {
+      if (window.scrollY > 0) {
+        navbar.classList.add("bg-navbar", "shadow-md", "navbar-bg");
+        navbar.classList.remove("bg-transparent");
+      } else {
+        navbar.classList.add("bg-transparent");
+        navbar.classList.remove("bg-navbar", "shadow-md", "navbar-bg");
       }
+    }
+    window.addEventListener("scroll", animasiscroll)
+    animasiscroll();
 
-      function hideMenus() {
-        openMenu.classList.remove("scale-100");
-        openMenu.classList.add("scale-0");
-        closeList.classList.remove("scale-0");
-        closeList.classList.add("scale-100");
-        showList.classList.add("scale-0");
-        showList.classList.remove("scale-100");
+    const button = document.getElementById('course-button');
+    const courseContent = document.getElementById('course-content');
+
+    button.addEventListener('click', function () {
+      if (courseContent.classList.contains('hidden')) {
+        courseContent.classList.remove('hidden');
+        button.textContent = 'Sembunyikan';
+      } else {
+        courseContent.classList.add('hidden');
+        button.textContent = 'Tampilkan Semua';
       }
+    });
 
-      var navbar = document.querySelector("nav");
+  </script>
+</body>
 
-          // Fungsi untuk mengubah background navbar saat di-scroll
-          function animasiscroll() {
-            if (window.scrollY > 0) {
-              navbar.classList.add("bg-navbar", "shadow-md", "navbar-bg");
-              navbar.classList.remove("bg-transparent");
-            } else {
-              navbar.classList.add("bg-transparent");
-              navbar.classList.remove("bg-navbar", "shadow-md", "navbar-bg");
-            }
-          }
-          window.addEventListener("scroll", animasiscroll)
-          animasiscroll()
-    </script>
-  </body>
 </html>

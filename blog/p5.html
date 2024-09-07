@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMA IT HSI-IDN</title>
+    <link rel="icon" href="../img/logo.png">
+    <link rel="stylesheet" href="../src/output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet" />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        * {
+            font-family: Montserrat;
+        }
+    </style>
+</head>
+
+<body>
+    <nav
+        class="h-16 w-full flex justify-between px-5 md:px-6 xl:px-10 py-3 items-center fixed transition-colors duration-500 bg-transparent">
+        <div class="hidden md:flex gap-5">
+            <h3 class="text-white text-sm lg:text-lg font-medium"><a href="../index.html">Home</a></h3>
+            <h3 class="text-white text-sm lg:text-lg font-medium"><a href="../index.html#about-us">About Us</a></h3>
+        </div>
+        <div class="flex">
+            <a href="../index.html" class="text-white text-lg md:text-xl lg:text-3xl font-bold">
+                SMA IT HSI-IDN
+            </a>
+        </div>
+        <div class="hidden md:flex gap-5">
+            <h3 class="text-white text-sm lg:text-lg font-medium"><a href="../index.html#course">Course</a></h3>
+            <h3 class="text-white text-sm lg:text-lg font-medium"><a href="../index.html#blog">Blog</a></h3>
+        </div>
+        <div class="md:hidden">
+            <div onclick="showMenus()" id="show" class="scale-100 md:hidden cursor-pointer transition duration-200">
+                <i class="ph-bold ph-list text-3xl text-white"></i>
+            </div>
+        </div>
+    </nav>
+
+    <div onclick="hideMenus()" id="hide"
+        class="scale-0 md:hidden cursor-pointer fixed top-4 right-5 z-[90] transition duration-200">
+        <i class="ph-bold ph-x text-white text-3xl"></i>
+    </div>
+    <div id="menus"
+        class="scale-0 w-full h-full bg-transparan fixed top-0 flex justify-center items-center transition duration-200 ease-in-out">
+        <ul class="text-white text-xl text-center w-10/12">
+            <a href="../index.html" onclick="hideMenus()">
+                <li
+                    class="w-full py-3 border mb-2 rounded-lg hover:scale-105 transition duration-200 hover:opacity-70 hover:shadow-md hover:shadow-black">
+                    Home
+                </li>
+            </a>
+            <a href="../index.html#about-us" onclick="hideMenus()">
+                <li
+                    class="w-full py-3 border mb-2 rounded-lg hover:scale-105 transition duration-200 hover:opacity-70 hover:shadow-md hover:shadow-black">
+                    About Us
+                </li>
+            </a>
+            <a href="../index.html#course" onclick="hideMenus()">
+                <li
+                    class="w-full py-3 border mb-2 rounded-lg hover:scale-105 transition duration-200 hover:opacity-70 hover:shadow-md hover:shadow-black">
+                    Course
+                </li>
+            </a>
+            <a href="../index.html#blog" onclick="hideMenus()">
+                <li
+                    class="w-full py-3 border mb-2 rounded-lg hover:scale-105 transition duration-200 hover:opacity-70 hover:shadow-md hover:shadow-black">
+                    Blog
+                </li>
+            </a>
+        </ul>
+    </div>
+
+    <section
+        class="w-full h-screen bg-[url('../img/bghero.JPG')] bg-cover bg-center bg-fixed px-7 flex items-center justify-center">
+        <div class="max-w-3xl flex flex-col gap-5 md:gap-7 lg:gap-10 justify-center items-center">
+            <h1 class="text-4xl md:text-5xl lg:text-7xl text-white font-bold text-center">
+                HSI IDN Blog
+            </h1>
+            <h3 class="text-white text-center text-xs md:text-sm lg:text-base">SMA-IT HSI-IDN menjadi lembaga pendidikan
+                berbasis asrama yang mampu melakukan kaderisasi generasi yang berakidah
+                shahihah, berakhlaq karimah, mandiri, unggul dalam prestasi serta menguasai ilmu pengetahuan & teknologi
+            </h3>
+            <div class="w-full md:max-w-xl flex justify-center">
+                <a href="#content"
+                    class="w-40 lg:w-56 bg-blue-700 rounded-full text-center py-2 md:py-3 hover:scale-105 transition duration-100 hover:shadow-lg cursor-pointer">
+                    <h4 class="text-white text-sm md:text-base">Lanjut</h4>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <section id="content" class="w-full h-fit px-8 py-16">
+        <div class="container w-full h-fit grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+            <div>
+                <div class="w-fit rounded-2xl overflow-hidden mb-3">
+                    <img src="../img/DSC_0078.JPG" class="w-full">
+                </div>
+                <div>
+                    <h1 class="text-white font-bold text-xl lg:text-3xl mb-2">Bimbingan P5 SMA IT HSI-IDN Purworejo</h1>
+                    <p class="text-white text-xs font-light italic">23 Juli 2024</p>
+                    <p class="font-light text-white text-transparan text-xs">Editor & Photographer : Abdurrahman &
+                        Zaidan</p>
+                </div>
+            </div>
+            <div class="text-white text-base">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur
+                    veritatis,
+                    adipisci odit
+                    repellendus rem neque deserunt voluptatem dolores, reiciendis fuga ullam deleniti provident
+                    distinctio dolore saepe? Nulla recusandae libero blanditiis at. Inventore aut ratione iure quasi
+                    aperiam magni voluptas, in praesentium assumenda! Exercitationem accusamus recusandae quod, alias
+                    suscipit ullam voluptas blanditiis neque? Aliquam, porro a, delectus nisi debitis reprehenderit,
+                    pariatur temporibus libero eius culpa fugiat impedit vero! Nobis dolorum in tenetur voluptatibus at
+                </p><br>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum et molestias dicta? Dignissimos
+                    perferendis expedita eligendi ducimus rerum. Minima officia, quia eius dolor qui doloribus alias
+                    illo aut neque reprehenderit facere repellendus sint assumenda voluptates natus nesciunt architecto
+                    expedita soluta voluptatibus odio nemo rem cupiditate recusandae. Sequi minus eius perferendis
+                    soluta illum ab quis, placeat voluptates labore, reiciendis doloremque! Sit ex eligendi excepturi
+                    placeat similique in soluta, blanditiis vitae ut provident assumenda delectus reiciendis dolores
+                    sunt voluptas corrupti doloribus accusantium. Possimus laboriosam sunt quod, sequi modi velit
+                    corporis, enim at voluptas, tenetur quae! Magni excepturi eos distinctio quod nobis sunt.</p>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <footer class="h-fit py-16 px-7 bg-blue-700 flex">
+        <div class="grid grid-cols-2 lg:grid-cols-5 justify-center items-center gap-5 text-white">
+            <div class="lg:col-span-2">
+                <h1 class="font-bold text-xl md:text-2xl lg:text-3xl mb-5">
+                    SMA IT HSI-IDN
+                </h1>
+                <p class="text-sm md:text-base font-light">
+                    SMA-IT HSI-IDN merupakan kolaborasi Yayasan HSI AbdullahRoy dan Yayasan IDN. Saat ini berada di
+                    Purworejo dan
+                    mulai
+                    tahun ajaran 2024/2025 akan berpindah ke daerah Cikembar, Sukabumi Jawa Barat.
+                </p>
+            </div>
+            <div class="">
+                <h3 class="text-base md:text-lg font-bold mb-3">Akses Cepat</h3>
+                <ul class="font-light">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about-us">About Us</a></li>
+                    <li><a href="#course">Our Service</a></li>
+                    <li><a href="#hsi">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="">
+                <h3 class="text-base md:text-lg font-bold mb-3">Pages</h3>
+                <ul class="font-light">
+                    <li>Our Blog</li>
+                    <li>Our Team</li>
+                    <li>Testimonial</li>
+                </ul>
+            </div>
+            <div class="">
+                <h3 class="text-base md:text-lg font-bold mb-3">Follow Us</h3>
+                <ul class="font-light">
+                    <li><a href="https://www.facebook.com/sma.ti.hsi.idn" target="_blank"></a>Facebook</li>
+                    <li><a href="https://www.instagram.com/smaithsiidn/" target="_blank">Instagram</a></li>
+                    <li><a
+                            href="https://wa.me/6289623039600?text=Assalamu'alaykum%20Warahmatullahi%20Wabarakatuh">Whatsapp</a>
+                    </li>
+                    <li><a href="https://www.youtube.com/@smaithsiidnpurworejo" target="_blank">Youtube</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script>const openMenu = document.querySelector("#menus");
+        const closeList = document.querySelector("#show");
+        const showList = document.querySelector("#hide");
+
+        function showMenus() {
+            openMenu.classList.add("scale-100");
+            openMenu.classList.remove("scale-0");
+            closeList.classList.add("scale-0");
+            closeList.classList.remove("scale-100");
+            showList.classList.remove("scale-0");
+            showList.classList.add("scale-100");
+        }
+
+        function hideMenus() {
+            openMenu.classList.remove("scale-100");
+            openMenu.classList.add("scale-0");
+            closeList.classList.remove("scale-0");
+            closeList.classList.add("scale-100");
+            showList.classList.add("scale-0");
+            showList.classList.remove("scale-100");
+        }
+
+        var navbar = document.querySelector("nav");
+
+        // Fungsi untuk mengubah background navbar saat di-scroll
+        function animasiscroll() {
+            if (window.scrollY > 0) {
+                navbar.classList.add("bg-navbar", "shadow-md", "navbar-bg");
+                navbar.classList.remove("bg-transparent");
+            } else {
+                navbar.classList.add("bg-transparent");
+                navbar.classList.remove("bg-navbar", "shadow-md", "navbar-bg");
+            }
+        }
+        window.addEventListener("scroll", animasiscroll)
+        animasiscroll();</script>
+</body>
+
+
+</html>
